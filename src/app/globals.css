@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: #000;
+  color: #fff;
+  @apply transition-all duration-300 ease-in-out text-xl md:text-base overflow-x-hidden bg-cover bg-no-repeat bg-center
+}
+
+::selection{
+  @apply bg-white text-black
+}
+
+.navLink{
+  @apply text-white font-light hover:text-opacity-90 text-sm md:text-base
+}
+
+.navBtn{
+  @apply w-8 h-3 py-1 px-3 md:w-28 md:h-12 rounded-[50px] border-2 md:py-2 md:px-6 text-white hover:bg-white hover:text-black
+}
+
+.homePage{
+  @apply flex min-h-screen justify-center items-center p-3 
+}
+.aboutPage{
+  @apply flex min-h-screen flex-col gap-4 p-3
+}
+
+.heroText {
+  @apply font-extrabold text-6xl md:text-[84px] text-center md:p-3 min-h-full pb-20 md:pb-3 animate-fade-up
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.error{
+  color: #FF0000;
+  font-weight:600;
+}
+
+.bgWrap{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+  filter:saturate(0.001) brightness(.2);
+}
+
+.contactInput{
+  @apply shadow-sm bg-transparent border-b-2 text-white block w-full p-2.5 text-base focus:outline-none border-gray-400 focus:border-white  focus:bg-transparent
+}
+
+.formWrapper{
+  border-radius: 50px;
+  border: 3px solid rgba(244, 244, 244, 0.60);
+
+  background: linear-gradient(145deg, rgba(244, 244, 244, 0.40) -4.23%, rgba(244, 244, 244, 0.20) 102.58%);
+
+  backdrop-filter: blur(10px);
+  @apply flex-1 flex justify-center items-center flex-col gap-4 py-12 px-6
+}
+
+.submitButton{
+  @apply rounded-xl bg-white w-72 h-12 font-bold text-black text-center shadow-md shadow-white hover:bg-black hover:text-white hover:shadow-black text-sm md:text-base
+}
+
+.companies{
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+  @apply flex flex-col justify-center items-center gap-4 py-3
+}
+
+.title{
+  @apply text-white px-2 py-8 text-4xl md:text-[84px] font-semibold
+}
+
+.companies-grid{
+  @apply grid grid-cols-4 grid-rows-4 gap-4
+}
+
+.header{
+  @apply h-24 flex justify-between px-6 py-3 md:px-28 md:py-4
+}
+
+.navigation{
+  @apply flex items-center justify-center md:gap-8 gap-3
+}
+
+.logoText{
+  @apply text-xl md:text-4xl text-white uppercase font-extrabold
+}
+
+
+.contactForm{
+  min-width: 100%;
+}
+
+@media (min-width: 750px) {
+  .logoText{
+      font-size: 2.25rem;
+  }
+}
+.about-image{
+  @apply w-96 h-96 md:w-[780px] md:h-[780px] rounded-full border-2 border-white shadow-xl object-cover
+}
+
+.insta{
+  @apply text-center grid place-items-center text-xl mt-8 w-full
+}
+
+.slideText{
+  @apply animate-fade-up animate-delay-100 underline hover:bg-black hover:text-white
+}
+
+#bg-video{
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-12;
+}
