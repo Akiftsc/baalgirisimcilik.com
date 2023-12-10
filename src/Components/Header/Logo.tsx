@@ -3,7 +3,7 @@ import React from 'react'
 
 function Logo() {
   return (
-    <Link href="/" className='flex flex-col items-center justify-center'>
+    <Link href="/" className='Logo'>
         <span className='logoText'>
             BAAL
         </span>

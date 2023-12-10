@@ -2,7 +2,7 @@ import Slider from "@/Components/Slider";
 
 export default function About() {
   return (
-    <main className="aboutPage animate-fade-up">
+    <main className="aboutPage">
         <h3 className="text-white px-2 py-8 text-3xl md:text-[84px] font-semibold">
             Hakkımızda
         </h3>

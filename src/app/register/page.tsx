@@ -2,6 +2,7 @@
 import Compaines from '@/Components/Companies';
 import {useEffect, useState} from 'react';
 import ContactForm from '@/Components/ContactForm';
+import Participants from '@/Components/Participants';
 
 
 
@@ -45,7 +46,7 @@ function Page() {
    
         
         <div className="flex-1">
-          <Compaines />
+          <Participants />
         </div>
 
       </div>

@@ -17,6 +17,9 @@ export default async function addUser(data: Data) {
 
     try {
         const usersCollection = collection(db, "users");
+          if(!data.classroom.includes("/")){
+                data.classroom =  data.classroom.slice(0, -1) + "/" + data.classroom.slice(-1)
+            } 
         result = await addDoc(usersCollection, data);
     } catch (e) {
         error = e;

@@ -28,7 +28,7 @@ body{
 }
 
 .heroText {
-  @apply font-extrabold text-6xl md:text-[84px] text-center md:p-3 min-h-full pb-20 md:pb-3 animate-fade-up
+  @apply font-extrabold text-6xl md:text-[82px] text-center min-h-full pb-20 md:pb-3 animate-fade-up
 }
 
 @keyframes fadeInAnimation {
@@ -70,6 +70,7 @@ body{
 }
 
 .submitButton{
+  margin: 0 auto;
   @apply rounded-xl bg-white w-72 h-12 font-bold text-black text-center shadow-md shadow-white hover:bg-black hover:text-white hover:shadow-black text-sm md:text-base
 }
 
@@ -95,12 +96,13 @@ body{
 }
 
 .logoText{
-  @apply text-xl md:text-4xl text-white uppercase font-extrabold
+  @apply text-xl md:text-4xl text-white uppercase font-extrabold text-center
 }
 
 
 .contactForm{
   min-width: 100%;
+  @apply flex flex-col gap-4
 }
 
 @media (min-width: 750px) {
@@ -128,4 +130,26 @@ body{
   top: 0;
   left: 0;
   z-index:-12;
+}
+
+
+.participants-grid{
+  @apply grid grid-cols-2 md:grid-cols-4 grid-rows-4 gap-5 p-4
+}
+
+.participants-grid div{
+  @apply  border-2 border-white shadow-xl object-cover flex justify-center items-center px-3 gap-2
+}
+
+.participants-grid div span{
+  @apply text-white text-center text-sm font-semibold flex-1
+}
+
+.insta-button{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  @apply rounded-xl bg-white w-72 h-12 font-bold text-center shadow-md text-white text-sm md:text-base
+}
+
+.Logo{
+  @apply flex flex-col items-center justify-center
 }
