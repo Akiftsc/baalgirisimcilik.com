@@ -6,6 +6,7 @@ import Background from '@/Components/Background'
 import Link from 'next/link'
 import {PHProvider, PostHogPageview } from "@/providers";
 import { Suspense } from 'react'
+import SnowEffect from '@/Components/SnowEffect'
 
 
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -68,11 +69,12 @@ export default function RootLayout({
       </Suspense>
       <PHProvider>
       <body className={`${montserrat.className}`}>
+        <SnowEffect />
         <Background />
         <Header />
         {children}
         <footer className='grid place-items-center text-center justify-center text-sm md:text-base '>
-          ©2023 BAAL Girişimcilik Kulübü <Link className='underline' href="https://makiftasci.xyz">-Mehmet Akif Taşçı</Link>
+          ©2024 BAAL Girişimcilik Kulübü <Link className='underline' href="https://makiftasci.xyz">-Mehmet Akif Taşçı</Link>
         </footer>
       </body>
       </PHProvider>
